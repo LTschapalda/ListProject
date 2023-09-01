@@ -15,7 +15,7 @@ public class School {
 
     //Schritt 6: Erstelle eine Methode, um eine*n Student aus der Schule zu entfernen.
     void removeStudent(Student student) {
-
+        studentList.remove(student);
     }
 
 
@@ -36,9 +36,10 @@ public class School {
                if (givenID == iStudent.matriculationNumber) {
                    System.out.println("Der Student geht auf diese Schule und heißt: " + iStudent.name + iStudent.surname);
                } else {
-                   System.out.println(("Der Student geht nicht auf diese Schule"));
+                   System.out.println("Der Student geht nicht auf diese Schule");
                }
 
         }
+        System.out.println("__________________________");
     }
 }

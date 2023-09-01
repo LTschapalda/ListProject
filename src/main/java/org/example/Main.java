@@ -6,9 +6,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        //Variablen
-        int testID = 678939399;
-
         //Objekte von Studenten erstellen
 
         Student firstStudent = new Student("Peter", "Maffay", 678939399);
@@ -41,12 +38,21 @@ public class Main {
         //Schüler hinzufügen zur Schule
 
         schoolOfRock.addStudent(firstStudent);
+        schoolOfRock.addStudent(thirdStudent);
 
         //Welche Schüler sind auf der schoolOfRock?
 
         System.out.println("Schüler der School of Rock: ");
         schoolOfRock.showListOfStudents();
 
+        //Check ob der Schüler auf der schoolOfRock ist?
         schoolOfRock.checkIfIsStudentAtThisSchool(678939399);
+        schoolOfRock.checkIfIsStudentAtThisSchool(870709800);
+
+
+        //Schüler von der schoolOfRock entfernen und neue Schülerliste ausgeben
+        schoolOfRock.removeStudent(thirdStudent);
+        System.out.println("Schüler der School of Rock: ");
+        schoolOfRock.showListOfStudents();
     }
 }
